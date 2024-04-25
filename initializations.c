@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   initializations.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lraggio <lraggio@student.42.rio>           +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/04/24 16:50:21 by lraggio           #+#    #+#             */
+/*   Updated: 2024/04/24 17:45:58 by lraggio          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "include/push_swap.h"
 
 t_node	*create_list(int args, char c)
@@ -9,7 +21,7 @@ t_node	*create_list(int args, char c)
 		return (NULL);
 	stack->args = args;
 	stack->top = -1;
-	stack->stack = malloc(sizeof(int) * args);
+	stack->stack = calloc(sizeof(int), (args));
 	stack->c = c;
 	return (stack);
 }

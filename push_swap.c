@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   push_swap.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lraggio <lraggio@student.42.rio>           +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/04/24 20:42:41 by lraggio           #+#    #+#             */
+/*   Updated: 2024/04/24 23:02:44 by lraggio          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "include/push_swap.h"
 
 int	is_sorted(t_node *stack)
@@ -27,27 +39,30 @@ void	sort(t_node *stack_a, t_node *stack_b)
 		complex_sort(stack_a, stack_b);
 }
 
-int     main(int argc, char **argv)
+int	main(int argc, char **argv)
 {
 	t_node	*stack_a;
 	t_node	*stack_b;
-	
+
 	stack_a = NULL;
 	stack_b = NULL;
 	if (argc < 2)
 		return (1);
-	if (!is_valid(argv))
+	else if (!is_valid(argv) && !argv[1][0] || (!is_valid(argv)))
 	{
 		ft_printf("Error\n");
 		return (0);
 	}
-	stack_a = create_list(argc - 1, 'a');
-	stack_b = create_list(argc - 1, 'b');
-	init_stack(stack_a, argv);
-	sort(stack_a, stack_b);
-	free(stack_a->stack);
-	free(stack_a);
-	free(stack_b->stack);
-	free(stack_b);
+	else
+	{
+		stack_a = create_list(argc - 1, 'a');
+		stack_b = create_list(argc - 1, 'b');
+		init_stack(stack_a, argv);
+		sort(stack_a, stack_b);
+		free(stack_a->stack);
+		free(stack_a);
+		free(stack_b->stack);
+		free(stack_b);
+	}
 	return (0);
 }

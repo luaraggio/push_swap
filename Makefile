@@ -6,13 +6,13 @@
 #    By: lraggio <lraggio@student.42.rio>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/25 13:13:46 by lraggio           #+#    #+#              #
-#    Updated: 2024/04/22 18:45:25 by lraggio          ###   ########.fr        #
+#    Updated: 2024/04/24 17:37:35 by lraggio          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
-CC = cc
-CFLAGS = -Wall -Wextra -Werror
+CC = gcc
+CFLAGS = -Wall -Wextra -Werror -g
 
 SRCS =	push_swap.c\
 	initializations.c\
@@ -41,7 +41,7 @@ $(LIBFT):
 	@echo "libft ready to be used"
 
 $(NAME): $(LIBFT) $(OBJS)
-	$(CC) $(CFLAGS) $(OBJS) $(LIBFT) -o $(NAME)
+	$(CC) $(CFLAGS) $(SRCS) $(LIBFT) -o $(NAME)
 clean:
 	make clean -C libft
 	rm -rf $(OBJS)

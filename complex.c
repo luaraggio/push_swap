@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   complex.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lraggio <lraggio@student.42.rio>           +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/04/24 16:49:49 by lraggio           #+#    #+#             */
+/*   Updated: 2024/04/24 18:52:23 by lraggio          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "include/push_swap.h"
 
 void	send_back_to_a(t_node *stack_a, t_node *stack_b)
@@ -19,7 +31,6 @@ void	send_back_to_a(t_node *stack_a, t_node *stack_b)
 		}
 		else if (i < stack_b->top / 2
 			&& (get_moves(stack_a, stack_b->stack[i]) + (i + 1)) < moves)
-
 		{
 			pos_b = i;
 			moves = get_moves(stack_a, stack_b->stack[i]) + (i + 1);

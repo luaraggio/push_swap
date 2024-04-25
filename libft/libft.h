@@ -6,7 +6,7 @@
 /*   By: lraggio <lraggio@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/22 17:40:58 by lraggio           #+#    #+#             */
-/*   Updated: 2024/03/27 17:29:53 by lraggio          ###   ########.fr       */
+/*   Updated: 2024/04/24 16:51:55 by lraggio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 char	*ft_strdup(const char *s);
-long    ft_atol(const char *str);
+long	ft_atol(const char *str);
 
 //Printf:
 
